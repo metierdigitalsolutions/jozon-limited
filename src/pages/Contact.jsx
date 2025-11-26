@@ -1,0 +1,1 @@
+export default function Contact(){return <div class='p-6'>Contact Us</div>}

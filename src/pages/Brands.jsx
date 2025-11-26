@@ -1,0 +1,1 @@
+export default function Brands(){return <div class='p-6'>Our Brands</div>}
