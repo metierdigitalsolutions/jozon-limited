@@ -1,10 +1,10 @@
-name: Publish JOZON Frontend to Staging/Main Server
+name: Publish JOZON Frontend to Staging/Master Server
 
 on:
   push:
     branches:
       - staging
-      - main
+      - master
 
 jobs:
   Deploy-Frontend:
