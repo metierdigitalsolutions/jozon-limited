@@ -1,4 +1,4 @@
-name: Publish StoreMet Frontend to Staging/Main Server
+name: Publish JOZON Frontend to Staging/Main Server
 
 on:
   push:
