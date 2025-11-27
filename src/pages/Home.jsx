@@ -7,7 +7,7 @@ export default function Home() {
         <div className="container mx-auto px-6 text-center">
 
           <img 
-            src="/logo.png" 
+            src="/logo.jpeg" 
             alt="Joson Limited Logo" 
             className="w-28 mx-auto mb-6"
           />
