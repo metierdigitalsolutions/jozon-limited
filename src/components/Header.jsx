@@ -9,7 +9,7 @@ export default function Header(){
         <Link to="/" className="flex items-center gap-3">
           <img src="/logo.jpeg" alt="JOSON" className="w-10 h-10 object-contain" />
           <div>
-            <div className="font-bold text-lg text-[#263FAF]">JOSON LIMITED</div>
+            <div className="font-bold text-lg text-[#263FAF]">JOSON NIGERIA LIMITED</div>
             <div className="text-xs text-gray-500 -mt-0.5">Quality You Can Trust</div>
           </div>
         </Link>

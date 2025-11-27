@@ -4,7 +4,7 @@ export default function Footer(){
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-6">
         <div>
           <img src="/logo.jpeg" alt="JOSON" className="w-12 h-12 mb-3"/>
-          <p className="text-gray-300 text-sm">JOSON LIMITED — delivering quality products across beverages, personal care, packaging and energy.</p>
+          <p className="text-gray-300 text-sm">JOSON NIGERIA LIMITED — delivering quality products across beverages, personal care, packaging and energy.</p>
         </div>
 
         <div className="text-sm text-gray-300">
@@ -21,7 +21,7 @@ export default function Footer(){
           <h4 className="font-semibold text-white mb-2">Contact</h4>
           <p>📞 +234 806 649 3451</p>
           <p>✉️ info@josonlimited.com</p>
-          <p className="mt-3 text-xs text-gray-400">© {new Date().getFullYear()} JOSON LIMITED. All rights reserved.</p>
+          <p className="mt-3 text-xs text-gray-400">© {new Date().getFullYear()} JOSON NIGERIA LIMITED. All rights reserved.</p>
           <p className="mt-3 text-xs text-gray-400"> Designed by <a href="https://metierdigitals.com" target="_blank" className="text-blue-500">Metier Digital Solutions</a></p>
         </div>
       </div>

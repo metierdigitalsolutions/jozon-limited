@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center text-center px-6 py-20 bg-gradient-to-br from-blue-700 to-blue-500 text-white">
       <div className="max-w-3xl mx-auto animate-fadeIn">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight drop-shadow-lg">
-          JOSON LIMITED
+          JOSON NIGERIA LIMITED
         </h1>
         <p className="text-lg md:text-xl mb-8 text-blue-100 leading-relaxed">
           A multi-brand company delivering excellence in water production, personal care,
