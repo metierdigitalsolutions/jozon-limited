@@ -1,14 +1,28 @@
-export default function About() {
+export default function About(){
   return (
-    <section className="py-20 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-4 text-gray-800">About Us</h2>
+    <main className="container mx-auto px-4 py-16">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#263FAF] mb-4">About JOSON LIMITED</h1>
+        <p className="text-gray-700 leading-relaxed text-lg">
+          JOSON LIMITED is a multi-industry company dedicated to producing essential products that support healthier living and stronger businesses.
+          We operate across beverages, personal care, packaging, and energy sectors — delivering consistent quality and value to our customers.
+        </p>
+      </div>
 
-      <p className="text-gray-600 leading-relaxed text-lg">
-        JOSON LIMITED is a diversified products company committed to quality, innovation, 
-        and customer satisfaction. We operate across beverages, personal care, plastics, 
-        oil & gas, and industrial lubricants — bringing reliable and essential products 
-        to homes and businesses across Nigeria.
-      </p>
-    </section>
-  );
+      <section className="mt-12 grid md:grid-cols-3 gap-8">
+        <div className="p-6 bg-white rounded-xl shadow">
+          <h3 className="font-semibold text-[#263FAF]">Our Vision</h3>
+          <p className="text-gray-600 mt-2 text-sm">To be a leading African brand known for quality and innovation.</p>
+        </div>
+        <div className="p-6 bg-white rounded-xl shadow">
+          <h3 className="font-semibold text-[#263FAF]">Our Mission</h3>
+          <p className="text-gray-600 mt-2 text-sm">Deliver high-quality products that improve everyday life.</p>
+        </div>
+        <div className="p-6 bg-white rounded-xl shadow">
+          <h3 className="font-semibold text-[#263FAF]">Values</h3>
+          <p className="text-gray-600 mt-2 text-sm">Quality — Reliability — Customer Focus — Innovation</p>
+        </div>
+      </section>
+    </main>
+  )
 }

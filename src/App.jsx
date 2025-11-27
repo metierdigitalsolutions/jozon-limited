@@ -5,6 +5,8 @@ import Brands from './pages/Brands'
 import Contact from './pages/Contact'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Brand from './pages/Brand'
+
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/brands' element={<Brands />} />
+        <Route path="/brands/:slug" element={<Brand/>}/>
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />

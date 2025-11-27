@@ -1,33 +1,50 @@
-export default function Contact() {
+import { useState } from 'react'
+
+export default function Contact(){
+  const [status, setStatus] = useState(null)
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    const form = new FormData(e.target)
+    setStatus('sending')
+
+    // Formspree example: replace URL with your form endpoint
+    const endpoint = 'https://formspree.io/f/yourFormId' // <-- replace
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: form
+      })
+      if(res.ok) setStatus('sent')
+      else setStatus('error')
+    } catch(err){
+      setStatus('error')
+    }
+  }
+
   return (
-    <section id="contact" className="py-16 px-6 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-6">Get in Touch</h2>
-      <p className="text-center text-gray-700 mb-8">
-        Have a question or want to place an order? Reach out to us today.
-      </p>
-      <form className="max-w-2xl mx-auto flex flex-col gap-4">
-        <input type="text" placeholder="Name" className="p-3 rounded border border-gray-300" />
-        <input type="email" placeholder="Email" className="p-3 rounded border border-gray-300" />
-        <input type="tel" placeholder="Phone (optional)" className="p-3 rounded border border-gray-300" />
-        <select className="p-3 rounded border border-gray-300">
-          <option>Product of Interest</option>
-          <option>JOVINA SACHET & BOTTLED WATER</option>
-          <option>JOBKLYN MULTIPURPOSE SOAP</option>
-          <option>JOBKLYN LIQUID SOAP</option>
-          <option>JOBKLYN BLACK HERBAL SOAP</option>
-          <option>JOZON POLY & PLASTIC</option>
-          <option>JOZON OIL & GAS</option>
-          <option>LUBRICANT & ENGINE OILS</option>
-        </select>
-        <textarea placeholder="Message" className="p-3 rounded border border-gray-300" rows="4"></textarea>
-        <button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-          Submit Inquiry
-        </button>
-      </form>
-      <p className="text-center text-gray-500 mt-6">
-        Or reach us directly at: <br/>
-        📞 +234 XXX XXX XXXX | 📧 info@josonlimited.com
-      </p>
-    </section>
-  );
+    <main className="container mx-auto px-4 py-12">
+      <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow">
+        <h2 className="text-2xl font-bold text-[#263FAF] mb-4">Contact Us</h2>
+
+        <form onSubmit={handleSubmit} className="grid gap-3">
+          <input name="name" required className="border p-3 rounded" placeholder="Full name"/>
+          <input name="email" type="email" required className="border p-3 rounded" placeholder="Email address"/>
+          <input name="phone" className="border p-3 rounded" placeholder="Phone (optional)"/>
+          <select name="product" className="border p-3 rounded">
+            <option value="">Product of interest</option>
+            {BRANDS.map(b=> <option key={b.slug} value={b.title}>{b.title}</option>)}
+          </select>
+          <textarea name="message" rows="5" className="border p-3 rounded" placeholder="Message"></textarea>
+
+          <button type="submit" className="bg-[#19C0F0] text-white px-5 py-3 rounded-lg">Send Inquiry</button>
+        </form>
+
+        {status === 'sending' && <p className="mt-3 text-sm text-gray-500">Sending…</p>}
+        {status === 'sent' && <p className="mt-3 text-sm text-green-600">Thanks — we received your message.</p>}
+        {status === 'error' && <p className="mt-3 text-sm text-red-600">Something went wrong. Try again later.</p>}
+      </div>
+    </main>
+  )
 }
