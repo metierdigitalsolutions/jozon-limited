@@ -8,12 +8,12 @@ export default function Home() {
 
           <img 
             src="/logo.jpeg" 
-            alt="Joson Nigeria Limited Logo" 
+            alt="JOZON Nigeria Limited Logo" 
             className="w-28 mx-auto mb-6"
           />
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            JOSON NIGERIA LIMITED
+            JOZON NIGERIA LIMITED
           </h1>
 
           <p className="text-xl md:text-2xl mt-4 max-w-3xl mx-auto text-blue-100">
@@ -36,11 +36,11 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold text-[#263FAF] text-center mb-8">
-            About JOSON NIGERIA LIMITED
+            About JOZON NIGERIA LIMITED
           </h2>
 
           <p className="text-lg text-gray-700 leading-relaxed text-center">
-            JOSON NIGERIA LIMITED is a multi-industry company dedicated to producing 
+            JOZON NIGERIA LIMITED is a multi-industry company dedicated to producing 
             essential daily-use products including water, soaps, plastics, and 
             energy solutions. Our mission is to provide high-quality, 
             affordable products that support healthier living and sustainable development.
@@ -132,10 +132,10 @@ export default function Home() {
           </p>
 
           <a 
-            href="mailto:info@josonlimited.com"
+            href="mailto:info@JOZONlimited.com"
             className="inline-block mt-10 bg-[#19C0F0] hover:bg-[#16A8D3] px-10 py-4 rounded-lg text-white font-semibold shadow-lg"
           >
-            info@josonlimited.com
+            info@JOZONlimited.com
           </a>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="py-8 bg-[#1A1A1A] text-center text-white text-sm">
-        © {new Date().getFullYear()} JOSON NIGERIA LIMITED. All Rights Reserved.
+        © {new Date().getFullYear()} JOZON NIGERIA LIMITED. All Rights Reserved.
       </footer>
 
     </div>
