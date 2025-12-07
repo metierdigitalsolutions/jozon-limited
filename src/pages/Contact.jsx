@@ -1,5 +1,13 @@
 import { useState } from 'react'
 
+// FIX: Add the BRANDS list
+const BRANDS = [
+  { slug: 'jovina-water', title: 'JOVINA Sachet & Bottled Water' },
+  { slug: 'jobklyn-soap', title: 'JOBKLYN Soaps' },
+  { slug: 'jozon-poly', title: 'JOZON Poly & Plastic' },
+  { slug: 'jozon-oil-gas', title: 'JOZON Oil & Gas' },
+]
+
 export default function Contact(){
   const [status, setStatus] = useState(null)
 
@@ -8,8 +16,7 @@ export default function Contact(){
     const form = new FormData(e.target)
     setStatus('sending')
 
-    // Formspree example: replace URL with your form endpoint
-    const endpoint = 'https://formspree.io/f/yourFormId' // <-- replace
+    const endpoint = 'https://formspree.io/f/yourFormId' // replace with your Formspree ID
     try {
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -32,13 +39,19 @@ export default function Contact(){
           <input name="name" required className="border p-3 rounded" placeholder="Full name"/>
           <input name="email" type="email" required className="border p-3 rounded" placeholder="Email address"/>
           <input name="phone" className="border p-3 rounded" placeholder="Phone (optional)"/>
+
           <select name="product" className="border p-3 rounded">
             <option value="">Product of interest</option>
-            {BRANDS.map(b=> <option key={b.slug} value={b.title}>{b.title}</option>)}
+            {BRANDS.map(b => (
+              <option key={b.slug} value={b.title}>{b.title}</option>
+            ))}
           </select>
+
           <textarea name="message" rows="5" className="border p-3 rounded" placeholder="Message"></textarea>
 
-          <button type="submit" className="bg-[#19C0F0] text-white px-5 py-3 rounded-lg">Send Inquiry</button>
+          <button type="submit" className="bg-[#19C0F0] text-white px-5 py-3 rounded-lg">
+            Send Inquiry
+          </button>
         </form>
 
         {status === 'sending' && <p className="mt-3 text-sm text-gray-500">Sending…</p>}
